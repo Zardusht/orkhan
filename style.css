@@ -15,7 +15,7 @@
     }
     
     body {
-        background-color: #d8d1d1;
+        background-color: #ffffff;
         background-size: cover;
         font-family: Arial, Helvetica, sans-serif;
     }
@@ -25,7 +25,7 @@
         position: absolute;
         width: 98%;
         height: 100%;
-        background-color: #d8d1d1;
+        background-color: #ffffff;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -33,17 +33,18 @@
     
     nav {
         background: rgb(17, 5, 80);
-        height: 10%;
         width: 100%;
+        height: 10%;
         margin-top: 10px;
     }
     
     label.logo {
         color: white;
         font-size: 35px;
-        line-height: 80px;
         padding: 0 15px;
-        font-weight: bold;
+        font-weight: 1000;
+        line-height: 80px;
+        margin-top: 50%;
     }
     
     nav ul {
@@ -78,34 +79,95 @@
         margin: 3px 0 0 0;
     }
     
-    .box {
-        display: block;
+    figure.box {
+        font-family: Arial, Helvetica, sans-serif;
+        position: relative;
+        overflow: hidden;
+        border: 3px white solid;
         width: 20%;
         height: 20vw;
-        float: left;
-        position: relative;
-        border: 2px white solid;
+        color: #000000;
         text-align: center;
-        overflow: hidden;
+        -webkit-perspective: 50em;
+        perspective: 50em;
+        float: left;
         max-width: 100%;
+        display: block;
         background-size: cover;
+    }
+    
+    figure.box * {
+        -webkit-box-sizing: padding-box;
+        box-sizing: cover;
+        -webkit-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+    }
+    
+    figure figcaption {
+        top: 50%;
+        left: 20px;
+        right: 20px;
+        position: absolute;
+        opacity: 0;
         z-index: 1;
     }
     
-    .box button {
-        width: 70%;
-        height: 18%;
-        border-radius: 30px;
-        margin-top: 42%;
-        background: rgb(17, 5, 80, 0.5);
-        color: white;
-        font-size: 22px;
-        visibility: hidden;
+    figure.box h2,
+    figure.box h4 {
+        margin: 0;
     }
     
-    .box:hover button {
-        background: rgb(17, 5, 80, 0.9);
-        visibility: visible;
+    figure.box h2 {
+        font-weight: 600;
+    }
+    
+    figure.box h4 {
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    
+    figure.box:after {
+        background-color: #ffffff;
+        position: absolute;
+        content: "";
+        display: block;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+        -webkit-transform: rotateX(-90deg);
+        transform: rotateX(-90deg);
+        -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        opacity: 0;
+    }
+    
+    figure.box a {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        z-index: 1;
+    }
+    
+    figure.box:hover figcaption,
+    figure.box.hover figcaption {
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        opacity: 1;
+        -webkit-transition-delay: 0.2s;
+        transition-delay: 0.2s;
+    }
+    
+    figure.box:hover:after,
+    figure.box.hover:after {
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+        opacity: 0.9;
     }
     
     footer {
@@ -145,29 +207,6 @@
         text-transform: uppercase;
     }
     
-    .box:hover {
-        cursor: pointer;
-        color: white;
-        filter: brightness(85%);
-    }
-    
-    .box a {
-        color: white;
-        font-size: 50px;
-        font-weight: 1000;
-        font-family: Tahoma, sans-serif;
-        text-decoration: none;
-        text-align: center;
-        letter-spacing: 4px;
-        line-height: 80px;
-        display: none;
-    }
-    
-    .box:hover a {
-        display: none;
-        color: white;
-    }
-    
     .checkbtn {
         font-size: 30px;
         color: white;
@@ -190,29 +229,12 @@
         overflow: hidden;
     }
     
-    .page-name {
-        width: 50%;
-        height: 13%;
-        background-color: #d8d1d1;
-        margin: 20px auto;
-        border-radius: 15px;
-        filter: blur(3px) brightness(80%);
-        box-shadow: 5px 5px #000000;
-        position: relative;
-        text-align: center;
-        padding-top: 25px;
-        font-size: 40px;
-        font-weight: 900;
-        line-height: 40px;
-        letter-spacing: 4px;
-    }
-    
     .page-box {
         width: 70%;
         height: 80%;
         margin: 100px auto;
         position: relative;
-        background-color: #d8d8d8;
+        background-color: #fff;
         border-radius: 15px;
     }
     
@@ -238,8 +260,8 @@
         overflow: hidden;
         padding: 25px 15px;
         filter: brightness(60%);
-        border: 2px black solid;
-        box-shadow: 10px 10px #2c3e50;
+        border: 0px black solid;
+        box-shadow: 0px 0px #2c3e50;
         margin-left: 100px;
         margin-top: 20px;
     }
@@ -261,15 +283,6 @@
         text-align: justify;
     }
     
-    .page-text:hover {
-        width: 52%;
-        height: 67%;
-        border-radius: 5%;
-        background-size: cover;
-        overflow: hidden;
-        padding: 15px 10px;
-    }
-    
     .page-text:hover h1 {
         filter: none;
     }
@@ -287,6 +300,7 @@
         margin-top: 25px;
         float: right;
         margin-right: 11%;
+        visibility: hidden;
     }
     
     .page-button a {
@@ -356,19 +370,12 @@
     }
     
     @media (max-width: 1024px) {
-        .box {
+        figure.box {
             position: relative;
             width: 100vw;
             height: 50vw;
             max-width: 100%;
             background-size: cover;
-        }
-        .box button {
-            margin-top: 18%;
-            background: rgb(17, 5, 80, 0.5);
-            color: white;
-            font-size: 350%;
-            visibility: hidden;
         }
     }
     
