@@ -1,4 +1,4 @@
-    * {
+        * {
         padding: 0;
         margin: 0;
         text-decoration: none;
@@ -379,42 +379,6 @@
         }
     }
     
-    @media (max-width: 690px) {
-        .box button {
-            margin-top: 18%;
-            color: white;
-            font-size: 300%;
-            visibility: hidden;
-        }
-    }
-    
-    @media (max-width: 590px) {
-        .box button {
-            margin-top: 18%;
-            color: white;
-            font-size: 150%;
-            visibility: hidden;
-        }
-    }
-    
-    @media (max-width: 380px) {
-        .box button {
-            margin-top: 18%;
-            color: white;
-            font-size: 150%;
-            visibility: hidden;
-        }
-    }
-    
-    @media (max-width: 300px) {
-        .box button {
-            margin-top: 18%;
-            color: white;
-            font-size: 18px;
-            visibility: hidden;
-        }
-    }
-    
     @media (max-width: 1100px) {
         footer {
             text-align: center;
@@ -433,7 +397,7 @@
             height: 90%;
             margin: 50px auto;
             position: relative;
-            background-color: #d8d8d8;
+            background-color: #ffffff;
             border-radius: 15px;
         }
         .page-image {
@@ -453,17 +417,12 @@
             position: relative;
             float: none;
             border-radius: 5%;
-            background: url(images/bg.png);
-            background-size: cover;
             overflow: hidden;
             padding: 25px 15px;
-            filter: brightness(60%);
-            border: 2px black solid;
-            box-shadow: 10px 10px #2c3e50;
             margin: 15px auto;
         }
         .page-text h1 {
-            font-size: 25px;
+            font-size: 35px;
             font-weight: 1000;
             line-height: 15px;
             font: bold;
@@ -471,21 +430,11 @@
             text-align: center;
         }
         .page-text span {
-            font-size: 13px;
-            font-weight: 200;
+            font-size: 20px;
+            font-weight: 500;
             line-height: 5px;
             font-family: Tahoma, sans-serif;
             text-align: justify;
-        }
-        .page-text:hover {
-            width: 92%;
-            height: 67%;
-            border-radius: 5%;
-            background: url(images/bg.png);
-            background-size: cover;
-            overflow: hidden;
-            padding: 15px 10px;
-            filter: brightness(120%);
         }
         .page-button {
             width: 70%;
@@ -498,19 +447,3 @@
             float: left;
             position: relative;
         }
-        .page-button a {
-            color: white;
-            font-size: 30px;
-            font-weight: 500;
-            font: bold;
-            font-family: Tahoma, sans-serif;
-        }
-        .page-button:hover {
-            background: blue;
-            cursor: pointer;
-        }
-        .page-button:hover a {
-            color: black;
-            font-size: 40px;
-        }
-    }
